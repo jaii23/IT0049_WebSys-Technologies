@@ -3,10 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>About</title>
+    <title>Profile</title>
 </head>
 <body>
-    <h1>About the System</h1>
+    <h1>Profile</h1>
 
     <nav>
         <a href="<?= site_url('/') ?>">Welcome</a> |
@@ -15,15 +15,10 @@
         <a href="<?= site_url('about') ?>">About</a>
     </nav>
 
-    <h2>Tasks for Today Management System</h2>
+    <h2><?= esc($user['full_name']) ?></h2>
 
-    <p>
-        This system was developed by <strong>Jirha Abit</strong>
-        using CodeIgniter 4 and MySQL.
-    </p>
-
-    <p>
-        It displays today's tasks, the complete task list, and a demo user's profile.
-    </p>
+    <p><strong>Username:</strong> <?= esc($user['username']) ?></p>
+    <p><strong>Email:</strong> <?= esc($user['email']) ?></p>
+    <p><strong>Date Created:</strong> <?= esc($user['created_at']) ?></p>
 </body>
 </html>

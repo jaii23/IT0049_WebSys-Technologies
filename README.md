@@ -1,33 +1,31 @@
-# CodeIgniter POS System
+# Tasks for Today Management System
 
-A basic four-page Point-of-Sale website created using CodeIgniter 4.
+A task management system developed using CodeIgniter 4 and MySQL.
 
 ## Pages
 
-- Home page: `/`
+- Welcome page: `/`
+- Full Task List page: `/tasks`
+- Profile page: `/profile`
 - About page: `/about`
-- Customer Accounts: `/customers`
-- User Accounts: `/users`
 
 ## Features
 
-- CodeIgniter 4 MVC structure
-- Routes and controllers
-- Views for each page
-- Static PHP arrays for temporary records
-- Customer and user data displayed using `foreach`
-- Navigation links between pages
+- Displays only today's tasks on the Welcome page
+- Displays all tasks ordered by date
+- Displays one demo user's profile
+- Uses CodeIgniter Models
+- Uses MySQL database records
+- Uses Query Builder through `findAll()` and `first()`
 
-## Requirements
+## Database Tables
 
-- PHP 8.2
-- Composer
-- CodeIgniter 4
+The project uses these tables:
 
-## How to Run
+- `tasks`
+- `users`
 
-1. Open the project folder in the terminal.
-2. Install the dependencies:
+The database export is located at:
 
-
-composer install
+```text
+database/tasks_system.sql
