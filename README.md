@@ -1,33 +1,52 @@
 # CodeIgniter POS System
 
-A basic four-page Point-of-Sale website created using CodeIgniter 4.
-
-## Pages
-
-- Home page: `/`
-- About page: `/about`
-- Customer Accounts: `/customers`
-- User Accounts: `/users`
+A Point-of-Sale customer and user account management system built with CodeIgniter 4.
 
 ## Features
 
+- Customer account listing
+- Add and edit customer records
+- Customer form validation
+- Required full name and valid email
+- Unique customer email validation
+- User account listing
+- Add and edit user records
+- Unique username validation
+- Required username and full name
+- User avatar upload
+- JPG, JPEG, and PNG validation
+- Maximum avatar size of 2 MB
+- Avatar resizing to 300 × 300 pixels
+- Placeholder image for users without avatars
 - CodeIgniter 4 MVC structure
-- Routes and controllers
-- Views for each page
-- Static PHP arrays for temporary records
-- Customer and user data displayed using `foreach`
-- Navigation links between pages
+- Database-backed customer and user records
 
-## Requirements
+## Pages and Routes
 
-- PHP 8.2
-- Composer
+| Page | Route |
+|---|---|
+| Home | `/` |
+| About | `/about` |
+| Customer Accounts | `/customers` |
+| Add Customer | `/customers/new` |
+| Edit Customer | `/customers/edit/{id}` |
+| User Accounts | `/users` |
+| Add User | `/users/new` |
+| Edit User | `/users/edit/{id}` |
+
+## Technologies Used
+
 - CodeIgniter 4
+- PHP 8.2
+- MariaDB or MySQL
+- XAMPP
+- HTML
+- CodeIgniter Validation and Image Services
 
-## How to Run
+## Database Setup
 
-1. Open the project folder in the terminal.
-2. Install the dependencies:
+1. Create a database named `pos_system`.
+2. Import the SQL file located at:
 
-
-composer install
+```text
+database/pos_system.sql
