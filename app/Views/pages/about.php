@@ -15,6 +15,8 @@
         <a href="<?= site_url('users') ?>">Users</a>
     </nav>
 
-    <p>This project demonstrates routing, controllers, views, and static PHP arrays in CodeIgniter.</p>
+    <p>Welcome to about page of the POS System. 
+        This project demonstrates routing, controllers, views, and static PHP arrays in CodeIgniter.
+    </p>
 </body>
 </html>

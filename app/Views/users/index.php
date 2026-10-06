@@ -17,18 +17,45 @@
 
     <br>
 
+    <a href="<?= site_url('/users/new') ?>">Add New User</a>
+
+    <br><br>
+
     <table border="1" cellpadding="8">
         <tr>
+            <th>Avatar</th>
             <th>Username</th>
             <th>Full Name</th>
-            <th>Role</th>
+            <th>Date Created</th>
+            <th>Action</th>
         </tr>
 
         <?php foreach ($users as $user): ?>
+            <?php
+                $avatar = ! empty($user['avatar'])
+                    ? $user['avatar']
+                    : 'avatar.jpeg';
+            ?>
+
             <tr>
+                <td>
+                    <img
+                        src="<?= base_url('uploads/avatars/' . $avatar) ?>"
+                        width="100"
+                        height="100"
+                        alt="User avatar"
+                    >
+                </td>
+
                 <td><?= esc($user['username']) ?></td>
                 <td><?= esc($user['full_name']) ?></td>
-                <td><?= esc($user['role']) ?></td>
+                <td><?= esc($user['created_at']) ?></td>
+
+                <td>
+                    <a href="<?= site_url('/users/edit/' . $user['id']) ?>">
+                        Edit
+                    </a>
+                </td>
             </tr>
         <?php endforeach; ?>
     </table>
